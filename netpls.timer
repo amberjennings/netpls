@@ -1,0 +1,11 @@
+[Unit]
+Description=Run netpls.service
+After=network.target
+
+[Install]
+WantedBy=timers.target
+
+[Timer]
+OnCalendar=*:0/30
+AccuracySec=1s
+Unit=netpls.service

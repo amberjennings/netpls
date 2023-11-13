@@ -1,0 +1,10 @@
+[Unit]
+Description=Connect to wifi
+After=network.target
+
+[Service]
+WorkingDirectory=/root/bin
+ExecStart=/usr/bin/python3 /path/to/netpls.py
+
+[Install]
+WantedBy=multi-user.target
