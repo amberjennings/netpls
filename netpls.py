@@ -37,7 +37,7 @@ def check_connectivity():
 
 # Connect to wifi network
 def connect_to_network(ssid, password):
-    os.system(f"nmcli device wifi connect \"{ssid}\" password {password}")
+    os.system(f"nmcli device wifi connect \"{ssid}\" password \"{password}\"")
 
 # Send email when the network is reconnected
 def send_email(mailserver, email, password, port):
