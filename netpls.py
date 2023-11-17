@@ -88,7 +88,6 @@ if __name__ == "__main__":
         else:
             log(f"Successfully connected to {ssid}.", log_file)
             # Send email
-            send_email(mailserver, email, mailpass, port)
             email_sent = send_email(mailserver, email, mailpass, port)
             if email_sent:
                 log("Email sent successfully!", log_file)
