@@ -9,6 +9,7 @@ Includes a systemd service and timer, currently configured to run every 30 minut
 - `python-yaml`, via pip or your systems package manager
 - Root access<br>
 - Access to a mail server from which to route your notifications<br>
+- NetworkManager (the script uses nmcli)
 
 ## Setup:
 - Update `rb.cfg.example` to be `rb.cfg`, within which all fields should be updated to have actual info<br>
@@ -19,3 +20,6 @@ Includes a systemd service and timer, currently configured to run every 30 minut
 ## Notes:
 - Please secure your .cfg file! This will have important passwords in it.
 - If it doesn't work, please try to do some debugging or contact me before raising an issue.
+- If your system is not using systemd, you can run this script via cron.<br>
+    - For example, to run every 30 minutes:
+    - */30 * * * * python3 /path/to/netpls.py
